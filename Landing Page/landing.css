@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Domine&family=Roboto+Slab:wght@200;300;400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    /*background-color: aqua;*/
+    height: 100vh;
+    width: 100vw;
+    background-image: url('land.jpg');
+    background-repeat: no-repeat;
+  
+}
+
+.navbar {
+    overflow: hidden;
+    position: relative;
+}
+.navbar .logo{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.navbar a {
+    float: left;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar #nav-links a {
+    text-decoration: none;
+    padding-left: 50px;
+    font-weight: bold;
+}
+
+.navbar a.icon {
+    float: right;
+    display: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 6px;
+}
+
+.active {
+    background-color: #04AA6D;
+    color: white
+}
+
+.prof {
+    flex-wrap: wrap;
+    margin-top: 260px;
+}
+
+.prof h2 {
+    margin-left: 300px;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Domine', serif;
+    font-family: 'Roboto Slab', serif;
+}
+
+.prof h1 {
+    margin-left: 300px;
+    font-size: 50px;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Domine', serif;
+    font-family: 'Roboto Slab', serif;
+}
+
+.prof p {
+    margin-left: 300px;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Domine', serif;
+    font-family: 'Roboto Slab', serif;
+}
+
+.prof .btn {
+    margin:20px 0px 0px 300px;
+    padding: 10px 25px 10px 25px;
+    background-color: rgb(92, 92, 255);
+    border-radius: 10px;
+    color: white;
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.prof .btn:hover {
+    background-color: rgb(193, 193, 255);
+}
+
+@media (max-width:700px) {
+    .navbar #nav-links {
+        display: none;
+    }
+
+    .navbar a.icon {
+        display: block;
+        float: right;
+    }
+
+    .prof {
+        margin-left: -300px;
+    }
+}
