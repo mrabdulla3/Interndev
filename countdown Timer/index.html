@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+
+            background-color: #fff;
+        }
+
+        body p {
+            margin: -450px 60px 10px 40px;
+            float: right;
+            font-size: 20px;
+            flex-wrap: wrap;
+        }
+
+        body #inpname {
+            height: 20px;
+            width: 30%;
+            padding: 10px;
+            margin: -400px 60px 10px 40px;
+            float: right;
+        }
+
+        body #inpemail {
+            height: 20px;
+            width: 30%;
+            padding: 10px;
+            margin: -350px 60px 10px 40px;
+            float: right;
+        }
+
+        body #btn {
+            width: 32%;
+            padding: 10px 25px 10px 25px;
+            margin: -290px 60px 10px 40px;
+            float: right;
+            border: none;
+            background-color: rgb(28, 203, 28);
+            box-shadow: 0 8px 10px rgba(24, 24, 24, 0.3);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        body #btn:hover {
+            background-color: #04ff86;
+        }
+
+        body .icon {
+            margin: -50px 100px 10px 20px;
+            float: right;
+        }
+
+        body .icon div {
+            padding: 8px;
+            border-radius: 20px;
+            background-color: rgb(17, 7, 159);
+            color: #fff;
+            cursor: pointer;
+            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        body .icon div:hover {
+            transform: translateY(2px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        body .icon .fa-twitter {
+            background-color: rgb(0, 169, 253);
+        }
+
+        body .icon .fa-instagram {
+            background-color: rgb(245, 61, 61);
+        }
+
+
+        .timer-container {
+            position: relative;
+            width: 50vw;
+            height: 100vh;
+            flex-wrap: wrap;
+            padding-top: 80px;
+            box-sizing: border-box;
+
+        }
+
+        .timer-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -30%;
+            width: 150%;
+            height: 100%;
+            background-color: #171616;
+            transform: skewX(-30deg);
+            transform-origin: top left;
+            z-index: -1;
+        }
+
+        .timer-container div {
+            width: 30px;
+            height: 30px;
+            margin: 0px 10px 10px 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 60px;
+            font-size: 30px;
+            height: fit-content;
+            box-shadow: 0px 12px 14px rgba(#f4efef);
+
+        }
+
+
+        @media (max-width:1100px) {
+            .timer-container {
+                padding: 10px 10px 10px 0px;
+            }
+
+            .timer-container div {
+                padding: 10px;
+                margin-top: 0px;
+                background-color: antiquewhite;
+                color: #171616;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="timer-container">
+        <div id="days">00</div>
+        <div id="hours">00</div>
+        <div id="minutes">00</div>
+        <div id="seconds">00</div>
+    </div>
+    <p>Our website is <b>Coming Soon</b> follow us for update now</p>
+    <input id="inpname" type="text" placeholder="Your name">
+    <input id="inpemail" type="email" placeholder="Email Address">
+    <button id="btn">Subscribe</button>
+    <div class="icon">
+        <div class="fab fa-facebook-f"></div>
+        <div class="fab fa-twitter"></div>
+        <div class="fab fa-instagram"></div>
+        <div class="fab fa-linkedin"></div>
+    </div>
+    <script>
+        var countdownDate = new Date("July 31, 2023 02:50:30").getTime();
+
+        // Update the countdown every second
+        var countdownTimer = setInterval(function () {
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the countdown date
+            var distance = countdownDate - now;
+
+            // Calculate the days, hours, minutes and seconds remaining
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the countdown in the HTML elements
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+            // If the countdown is finished, display a message
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+            }
+        }, 1000);
+
+
+    </script>
+</body>
+
+</html>
