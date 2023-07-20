@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+  <link rel="stylesheet" href="to do.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-todo-list/check1.webp" alt="Check"
+            width="60">
+        <h2>Task List</h2>
+        <table id="taskList">
+            <thead>
+                <tr>
+                    <th>Status</th>
+                    <th>Task</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Design a Website</td>
+                    <td>
+                        <button class="svgbtn" onclick="deleteTask(this)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="taskadd">
+            <input class="plc" id="newTaskInput" type="text" placeholder="Enter the task" required>
+            <button id="btn" type="button" onclick="addTask()">Add Task</button>
+        </div>
+    </div>
+   <script src="to do.js"></script>
+</body>
+
+</html>

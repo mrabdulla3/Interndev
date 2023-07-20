@@ -1,0 +1,145 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Domine&family=Roboto+Slab:wght@200;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100ch;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.container {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px 20px 20px;
+    background-color: #c3c4cf;
+    box-shadow: 0px 0px 5px 5px #bab3b3;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.container h2 {
+    color: rgb(75, 75, 244);
+}
+
+.container h4 {
+    color: rgb(75, 75, 244);
+}
+
+.container h2,
+h3 {
+    text-shadow: 2px 2px 4px rgba(145, 133, 133, 0.5);
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Domine', serif;
+    font-family: 'Roboto Slab', serif;
+}
+
+.container .image {
+    border: 5px solid white;
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+    margin: auto;
+    box-shadow: 0 12px 14px rgba(0, 0, 0, 0.3);
+}
+
+.container .image img {
+    border-radius: 75px;
+
+}
+
+.container .about h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Domine', serif;
+    font-family: 'Roboto Slab', serif;
+}
+
+.container .about p {
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Domine', serif;
+    font-family: 'Roboto Slab', serif;
+}
+
+.container .icon {
+    display: flex;
+    padding: 10px;
+    margin-left: 55px;
+
+}
+
+.container .icon i {
+    padding: 8px;
+    border: 2px solid rgb(253, 248, 248);
+    border-radius: 20px;
+    background-color: #fff;
+    margin-left: 20px;
+    cursor: pointer;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+}
+
+.container .icon i:hover {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.container .icon i:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.container .icon .fa-facebook-f {
+    color: blue;
+}
+
+.container .icon .fa-twitter {
+    color: blue;
+}
+
+.container .icon .fa-instagram {
+    color: rgb(255, 45, 45);
+}
+
+.container .icon .fa-linkedin {
+    color: blue;
+}
+
+.container .buttons {
+    padding: 10px;
+
+}
+
+.btn {
+    color: #fff;
+    padding: 12px 24px;
+    margin: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #aaaaab;
+    cursor: pointer;
+    background: linear-gradient(to bottom, #939495, #959ca3);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.btn:hover {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+.btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
